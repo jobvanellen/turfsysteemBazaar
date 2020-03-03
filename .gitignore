@@ -1,0 +1,11 @@
+#ignore images
+*.jpg
+*.png
+*.gif
+
+#ignore lijst
+lijst.txt
+
+#ignore penning files
+*.xslx
+*.log
