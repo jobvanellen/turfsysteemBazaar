@@ -7,5 +7,5 @@
 lijst.txt
 
 #ignore penning files
-*.xslx
+*.xlsx
 *.log
