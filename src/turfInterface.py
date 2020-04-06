@@ -18,7 +18,7 @@ voWindow = Window(app, title="73 bravo", height=300, width=500, visible=False)
 voText = Text(voWindow, text="GEFELICITEERD JIJ ONTZETTENDE VOBAAS", align="top")
 voText2 = Text(voWindow, text="73 pilsies gemurderd", align="top")
 
-superVoWindow = Window(app, title="Bierlijscht gewonnen maat", height=300, width=500, visible=False)
+superVoWindow = Window(app, title="spiegeltje spiegeltje aan de wand, wie is de grootste pilsbaas van het land?", height=300, width=500, visible=False)
 superVoText = Text(superVoWindow, text="LEKKER GEZOPEN OUWE!", align="top")
 superVoText2 = Text(superVoWindow, text="Je hebt de bierlijst gewonnen", align="top")
 superVoText3 = Text(superVoWindow, text="Check ff op wie je anytimers hebt", align="top")
@@ -37,10 +37,20 @@ def turf(persoon):
    if persoon['turfjes'] == 73:
       openVo()
    elif persoon['turfjes'] == 140:
+      losers = []
+      superLosers = []
+      first = True
       for persooncheck in huisgenoten:
          if persooncheck['turfjes'] >= 140 and persooncheck != persoon:
-            break
-      openSuperVo()
+            first = False
+         elif persooncheck['turfjes'] < 10 and persooncheck['naam'] != 'Huis':
+            superLosers.append(persooncheck['naam'])
+         elif persooncheck['turfjes'] < 20 and persooncheck['naam'] != 'Huis':
+            losers.append(persooncheck['naam'])
+
+      superVoText3.value = "Je hebt 1 anytimer op: " + ', '.join(losers) + ". \n Je hebt 2 anytimers op: " + ', '.join(superLosers) + "."
+      if first:
+         openSuperVo()
    
    updateHistory(persoon)
    updateStand()
