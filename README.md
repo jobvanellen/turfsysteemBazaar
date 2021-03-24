@@ -5,3 +5,6 @@ Turfsysteem studentenhuis "De Bazaar"
 1. Maak de folder /home/pi/Turfsysteem aan
 2. Zet in deze folder, Turfinterface.pi, lijst.txt en de foto's in de juiste verhoudingen
 3. Zorg de de namen van de foto's en de fotolocaties in lijst.txt overeenkomen
+4. Installeer python3 -> sudo apt-get install pyhon3
+5. Instaleer guizero -> sudo pip3 install guizero
+6. Installeer Pillow -> sudo pip3 install Pillow
