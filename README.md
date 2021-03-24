@@ -1,3 +1,7 @@
 Turfsysteem studentenhuis "De Bazaar"
 ====================================
 
+## Om het systeem op een raspberry pi te zetten:
+1. Maak de folder /home/pi/Turfsysteem aan
+2. Zet in deze folder, Turfinterface.pi, lijst.txt en de foto's in de juiste verhoudingen
+3. Zorg de de namen van de foto's en de fotolocaties in lijst.txt overeenkomen
