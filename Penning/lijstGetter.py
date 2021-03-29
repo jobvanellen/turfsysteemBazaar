@@ -21,7 +21,7 @@ except:
     sys.exit()
     
 # Auth    
-username,password = "pi","raspberry"
+username,password = "pi","Bazaar73vo"
 try:
     transport.connect(None,username,password)
     print("Ingelogd")
